@@ -8,5 +8,17 @@ document.getElementById('start').addEventListener('click', function() {
     // 2. Visualizzazione dei numeri
     document.getElementById('numeri').innerText = numeri.join(', ');
 
-   
+    // 3. Impostazione del timer di 30 secondi
+    setTimeout(function() {
+        // 4. Rimozione dei numeri
+        document.getElementById('numeri').innerText = '';
+        
+        // 5. Input dell'utente
+        let numeriUtente = [];
+        for (let i = 0; i < 5; i++) {
+            let numero = parseInt(prompt(`Inserisci il numero ${i + 1}`));
+            numeriUtente.push(numero);
+        }
+
+
 });
