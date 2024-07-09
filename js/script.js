@@ -19,6 +19,12 @@ document.getElementById('start').addEventListener('click', function() {
             let numero = parseInt(prompt(`Inserisci il numero ${i + 1}`));
             numeriUtente.push(numero);
         }
+             
+        // 6. Verifica dei numeri
+        let numeriIndovinati = numeri.filter(numero => numeriUtente.includes(numero));
+        let messaggio = `Hai indovinato ${numeriIndovinati.length} numero/i: ${numeriIndovinati.join(', ')}`;
 
-
+        // 7. Visualizzazione dei risultati
+        alert(messaggio);
+    }, 30000); // 30 secondi
 });
